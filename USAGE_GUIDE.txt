@@ -1,0 +1,380 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                     FXAP SECURITY ANALYZER TOOLKIT                        ║
+║               Educational Tool for Defensive Security                     ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+📁 PROJECT STRUCTURE
+────────────────────────────────────────────────────────────────────────────
+
+fxap_analyzer.py              → Main decryption/analysis tool
+SECURITY_GUIDE.md             → Comprehensive protection guide
+SUMMARY.md                    → Quick reference summary
+README.md                     → Full documentation
+USAGE_GUIDE.txt              → This file
+
+examples/
+  ├── secure_license_system.lua    → Working license validation example
+  └── better_encryption.py         → Proper encryption comparison
+
+encrypted/                    → Example encrypted resource
+decrypted/                   → Example decrypted resource
+test_decrypt/                → Tool output directory
+
+
+🚀 QUICK START
+────────────────────────────────────────────────────────────────────────────
+
+1. Analyze FXAP encryption:
+   $ python3 fxap_analyzer.py encrypted/l2s-dispatch/.fxap
+
+2. Decrypt a directory:
+   $ python3 fxap_analyzer.py encrypted/l2s-dispatch/.fxap \
+                              encrypted/l2s-dispatch/client/ \
+                              output_directory/
+
+3. Compare encryption methods:
+   $ python3 examples/better_encryption.py
+
+
+📚 WHAT YOU'LL LEARN
+────────────────────────────────────────────────────────────────────────────
+
+✓ How FXAP encryption works (XOR cipher with plaintext key)
+✓ Why it's vulnerable (multiple attack vectors)
+✓ How attackers break it (key extraction, known-plaintext)
+✓ How to protect your scripts (multi-layer defense)
+✓ Industry-standard security practices
+✓ License validation implementation
+✓ Proper cryptography usage
+
+
+🔐 SECURITY FINDINGS
+────────────────────────────────────────────────────────────────────────────
+
+FXAP Encryption Analysis:
+  Algorithm: XOR cipher (1970s technology)
+  Key Storage: Plaintext in .fxap file
+  Security Rating: 1/10
+  Time to Break: Minutes
+  Cost to Break: $0 (free tools)
+
+Why it's weak:
+  ❌ Simple XOR - reversible with basic math
+  ❌ Plaintext key - no protection
+  ❌ No authentication - tampering undetected
+  ❌ Known-plaintext vulnerable
+  ❌ Static key reuse
+
+
+🛡️ PROTECTION RECOMMENDATIONS
+────────────────────────────────────────────────────────────────────────────
+
+Priority 1: SERVER-SIDE LOGIC ⭐⭐⭐⭐⭐
+  → Move ALL critical operations to server
+  → Client is display/UI only
+  → Server validates everything
+  → Most effective protection
+
+Priority 2: LICENSE VALIDATION ⭐⭐⭐⭐
+  → API-based license checking
+  → Hardware fingerprinting
+  → Expiration dates
+  → Revocation capability
+
+Priority 3: CODE OBFUSCATION ⭐⭐⭐⭐
+  → Use Luraph or IronBrew
+  → Makes code unreadable
+  → Adds anti-debug features
+  → $50-200 investment
+
+Priority 4: INTEGRITY CHECKING ⭐⭐⭐
+  → Runtime file verification
+  → Detect tampering
+  → SHA-256 hashes
+  → HMAC authentication
+
+Priority 5: ANTI-DEBUG ⭐⭐⭐
+  → Timing checks
+  → Environment validation
+  → Debugger detection
+  → Memory protection
+
+
+💼 IMPLEMENTATION EXAMPLES
+────────────────────────────────────────────────────────────────────────────
+
+1. License System:
+   See: examples/secure_license_system.lua
+   
+   Features:
+   • API-based validation
+   • Hardware fingerprinting
+   • Periodic re-checks
+   • File integrity verification
+   • Anti-debug detection
+
+2. Proper Encryption:
+   See: examples/better_encryption.py
+   
+   Features:
+   • AES-256-CBC encryption
+   • PBKDF2 key derivation
+   • HMAC authentication
+   • Per-file salt
+   • Industry standard
+
+
+📖 DOCUMENTATION GUIDE
+────────────────────────────────────────────────────────────────────────────
+
+Start Here:
+  1. SUMMARY.md          → Overview and quick reference
+  2. README.md           → Full documentation
+  3. SECURITY_GUIDE.md   → In-depth protection strategies
+
+Code Examples:
+  1. examples/secure_license_system.lua  → License validation
+  2. examples/better_encryption.py       → Proper cryptography
+
+Tools:
+  1. fxap_analyzer.py    → Decrypt and analyze FXAP
+
+
+🎯 COMMON USE CASES
+────────────────────────────────────────────────────────────────────────────
+
+Use Case 1: Analyze FXAP Security
+  $ python3 fxap_analyzer.py path/to/.fxap
+  
+  Output:
+  • Key length and details
+  • Security weaknesses
+  • Protection recommendations
+
+Use Case 2: Decrypt Scripts for Analysis
+  $ python3 fxap_analyzer.py .fxap encrypted/ output/
+  
+  Result:
+  • All .lua files decrypted
+  • Preserves directory structure
+  • Identifies protected files
+
+Use Case 3: Learn Proper Encryption
+  $ python3 examples/better_encryption.py
+  
+  Shows:
+  • FXAP vs AES-256 comparison
+  • Security ratings
+  • Implementation example
+
+Use Case 4: Implement License System
+  Copy: examples/secure_license_system.lua
+  
+  Modify:
+  • API endpoint
+  • License key validation
+  • Hardware fingerprinting
+  • Resource-specific checks
+
+
+⚠️ PROTECTION CHECKLIST
+────────────────────────────────────────────────────────────────────────────
+
+Before Release:
+  □ Critical logic moved server-side
+  □ License validation implemented
+  □ Code obfuscated professionally
+  □ Integrity checks on startup
+  □ Anti-debug detection active
+  □ Environment validation working
+  □ API endpoints secured (HTTPS, auth)
+  □ Rate limiting configured
+  □ Copyright notice added
+  □ EULA/license terms written
+  □ Update mechanism ready
+  □ Monitoring system active
+
+After Release:
+  □ Monitor license violations
+  □ Track suspicious activity
+  □ Update protection regularly
+  □ Respond to breach attempts
+  □ Maintain customer support
+  □ Plan for leaks (DMCA ready)
+
+
+🔬 TESTING YOUR PROTECTION
+────────────────────────────────────────────────────────────────────────────
+
+Self-Test:
+  1. Can you read the code easily?
+  2. Can you bypass the license?
+  3. Can you modify behavior?
+  4. Can you extract assets?
+  5. Can you debug execution?
+
+Red Team Test:
+  1. Give to trusted friend
+  2. Ask them to break it
+  3. Document findings
+  4. Fix weaknesses
+  5. Retest
+
+Automated Tests:
+  • Static analysis tools
+  • Decompiler attempts
+  • Debugger attachment
+  • Network traffic inspection
+  • License bypass attempts
+
+
+📊 SECURITY COMPARISON
+────────────────────────────────────────────────────────────────────────────
+
+Protection Level    | Time to Break  | Cost      | Recommended For
+────────────────────|────────────────|───────────|─────────────────────
+FXAP Only          | Minutes        | $0        | Free scripts only
++ Obfuscation      | Days           | $50-200   | Small paid scripts
++ License System   | Weeks          | $100+     | Medium projects
++ Server Logic     | Months         | Free*     | Important logic
+Full Stack         | Years+         | $200+     | Commercial products
+
+*Free but requires server dev work
+
+
+🚨 INCIDENT RESPONSE
+────────────────────────────────────────────────────────────────────────────
+
+If Your Script is Leaked:
+
+Immediate (Hour 1):
+  1. Revoke compromised licenses
+  2. Change API keys
+  3. Update encryption
+  4. Add new protection layer
+  5. Document the breach
+
+Short-term (Day 1-7):
+  1. Send DMCA takedowns
+  2. Contact hosting providers
+  3. Notify legitimate customers
+  4. Release patched version
+  5. Monitor leak sites
+
+Long-term (Week 1+):
+  1. Improve protection
+  2. Legal action if warranted
+  3. Update all customers
+  4. Review security practices
+  5. Plan prevention measures
+
+
+💡 TIPS & BEST PRACTICES
+────────────────────────────────────────────────────────────────────────────
+
+Development:
+  • Assume client is hostile
+  • Never trust client input
+  • Validate everything server-side
+  • Use secure defaults
+  • Log security events
+
+Deployment:
+  • Use HTTPS only
+  • Implement rate limiting
+  • Monitor access patterns
+  • Regular security audits
+  • Keep dependencies updated
+
+Maintenance:
+  • Rotate keys periodically
+  • Update obfuscation
+  • Patch vulnerabilities quickly
+  • Monitor breach sites
+  • Maintain customer trust
+
+
+📞 RESOURCES & SUPPORT
+────────────────────────────────────────────────────────────────────────────
+
+Security Tools:
+  • Luraph        → https://luraph.com
+  • IronBrew      → https://ironbrew.cc
+  • FiveManage    → https://fivemanage.com
+
+Learning:
+  • OWASP         → https://owasp.org
+  • Cryptography  → Coursera (Dan Boneh)
+  • FiveM Docs    → https://docs.fivem.net
+
+Community:
+  • FiveM Discord → Technical support
+  • CFX Forums    → Development help
+  • Reddit        → r/FiveM
+
+
+⚖️ ETHICAL USE
+────────────────────────────────────────────────────────────────────────────
+
+✅ Appropriate Uses:
+  • Analyzing YOUR scripts
+  • Learning security
+  • Defensive research
+  • Authorized testing
+  • Education
+
+❌ Inappropriate Uses:
+  • Cracking others' scripts
+  • Pirating paid resources
+  • Violating licenses
+  • Malicious use
+  • Unauthorized access
+
+
+🎓 LEARNING PATH
+────────────────────────────────────────────────────────────────────────────
+
+Beginner:
+  1. Read SUMMARY.md
+  2. Run fxap_analyzer.py
+  3. Understand XOR weakness
+  4. Review security basics
+
+Intermediate:
+  1. Study SECURITY_GUIDE.md
+  2. Implement license system
+  3. Test obfuscation tools
+  4. Practice secure coding
+
+Advanced:
+  1. Native module development
+  2. Custom crypto implementation
+  3. Advanced anti-tampering
+  4. Security architecture
+
+
+🔑 KEY TAKEAWAYS
+────────────────────────────────────────────────────────────────────────────
+
+1. FXAP alone is NOT enough protection
+2. Use defense-in-depth (multiple layers)
+3. Server-side is your strongest defense
+4. License validation prevents distribution
+5. Obfuscation adds complexity
+6. Regular updates are critical
+7. Monitor for breaches actively
+8. Plan for worst-case scenarios
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+For detailed information, read the documentation files:
+  • SUMMARY.md        → Quick overview
+  • SECURITY_GUIDE.md → Protection strategies
+  • README.md         → Complete documentation
+
+Questions? Review the documentation or consult security professionals.
+
+═══════════════════════════════════════════════════════════════════════════
+                Educational tool for defensive security only
+═══════════════════════════════════════════════════════════════════════════
